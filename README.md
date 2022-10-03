@@ -2,12 +2,12 @@
 #### Webová chatovací aplikace využívající framework Django
 
 ## Cíle:
-- Instalace modulů a virtuálního prostředí
-- vytvořit základ aplikace (models.py, urls.py, views.py atd.)
-- vytvořit základní design webové stránky (pravděpodobně využiju bootstrap nebo tailwindcss)
-- vytvořit registrační a přihlašovací formulář
-- zařídit funkčnost registrace a přihlášení včetně chybových hlášek
-- zařídit funkčnost odhlášení
+- Instalace modulů a virtuálního prostředí &check;
+- vytvořit základ aplikace (models.py, urls.py, views.py atd.) &check;
+- vytvořit základní design webové stránky (pravděpodobně využiju bootstrap nebo tailwindcss) &check;
+- vytvořit registrační a přihlašovací formulář &check;
+- zařídit funkčnost registrace a přihlášení včetně chybových hlášek &check;
+- zařídit funkčnost odhlášení &check;
 - vytvořit appku pro místnosti
 - vytvořit super uživatele
 - zobrazení seznamu s jednotlivými místnostmi
