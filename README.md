@@ -8,8 +8,8 @@
 - vytvořit registrační a přihlašovací formulář &check;
 - zařídit funkčnost registrace a přihlášení včetně chybových hlášek &check;
 - zařídit funkčnost odhlášení &check;
-- vytvořit appku pro místnosti
-- vytvořit super uživatele
+- vytvořit appku pro místnosti &check;
+- vytvořit super uživatele &check;
 - zobrazení seznamu s jednotlivými místnostmi
 - zobrazení detailu jednotlivých místností
 - možnost připojit se do chatu
