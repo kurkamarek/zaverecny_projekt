@@ -9,11 +9,13 @@ RUN mkdir /django_recipe_api
 WORKDIR /django_recipe_api
 # Copies from your local machine's current directory to the django_recipe_api folder 
 # in the Docker image
-COPY . .
+COPY . /django_recipe_api
 # Copy the requirements.txt file adjacent to the Dockerfile 
 # to your Docker image
-COPY ./requirements.txt /requirements.txt
 # Install the requirements.txt file in Docker image
-RUN pip install -r /requirements.txt
+RUN python -m pip install --upgrade pip
+RUN pip install -r requirements.txt
 
-CMD python manage.py runserver
+CMD ["python","manage.py","runserver","0.0.0.0:8000"]
+
+
