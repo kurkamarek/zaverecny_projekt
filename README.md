@@ -10,8 +10,8 @@
 - zařídit funkčnost odhlášení &check;
 - vytvořit appku pro místnosti &check;
 - vytvořit super uživatele &check;
-- zobrazení seznamu s jednotlivými místnostmi
-- zobrazení detailu jednotlivých místností
+- zobrazení seznamu s jednotlivými místnostmi &check;
+- zobrazení detailu jednotlivých místností &check;
 - možnost připojit se do chatu
 - funkční odesílání zpráv
 - ukládání zpráv
