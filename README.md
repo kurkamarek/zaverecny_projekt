@@ -16,3 +16,9 @@
 - funkční odesílání zpráv
 - ukládání zpráv
 - dockerizovat aplikaci
+
+## Zdroje:
+- https://youtu.be/SF1k_Twr9cg
+- https://docs.djangoproject.com/en/4.1/intro/tutorial01/
+- https://blog.logrocket.com/dockerizing-django-app/
+- https://pipenv-fork.readthedocs.io/en/latest/basics.html
