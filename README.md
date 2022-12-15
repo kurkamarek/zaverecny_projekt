@@ -24,4 +24,6 @@
 - https://pipenv-fork.readthedocs.io/en/latest/basics.html
 
 ## Chyby:
-- během připojení do chatu následující chyba: Uncaught TypeError: Cannot read properties of null (reading 'textContent') odkazující na řádek 41 v room.html "const roomName = JSON.parse(document.getElementById('json-roomname').textContent);"
+- během připojení do chatu následující chyba: Uncaught TypeError: Cannot read properties of null (reading 'textContent')<br/>
+odkazující na řádek 41 v room.html <br/>
+const roomName = JSON.parse(document.getElementById('json-roomname').textContent);
