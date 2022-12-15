@@ -22,3 +22,6 @@
 - https://docs.djangoproject.com/en/4.1/intro/tutorial01/
 - https://blog.logrocket.com/dockerizing-django-app/
 - https://pipenv-fork.readthedocs.io/en/latest/basics.html
+
+## Chyby:
+- během připojení do chatu následující chyba: Uncaught TypeError: Cannot read properties of null (reading 'textContent') odkazující na řádek 41 v room.html "const roomName = JSON.parse(document.getElementById('json-roomname').textContent);"
