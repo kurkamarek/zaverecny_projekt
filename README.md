@@ -12,7 +12,7 @@
 - vytvořit super uživatele &check;
 - zobrazení seznamu s jednotlivými místnostmi &check;
 - zobrazení detailu jednotlivých místností &check;
-- možnost připojit se do chatu
+- možnost připojit se do chatu &check;
 - funkční odesílání zpráv
 - ukládání zpráv
 - dockerizovat aplikaci
@@ -26,4 +26,4 @@
 ## Chyby:
 - během připojení do chatu následující chyba: Uncaught TypeError: Cannot read properties of null (reading 'textContent')<br/>
 odkazující na řádek 41 v room.html <br/>
-const roomName = JSON.parse(document.getElementById('json-roomname').textContent);
+const roomName = JSON.parse(document.getElementById('json-roomname').textContent); &#10004; OPRAVENO
