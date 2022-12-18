@@ -27,3 +27,4 @@
 - během připojení do chatu následující chyba: Uncaught TypeError: Cannot read properties of null (reading 'textContent')<br/>
 odkazující na řádek 41 v room.html <br/>
 const roomName = JSON.parse(document.getElementById('json-roomname').textContent); &#10004; OPRAVENO
+- při odesílání zprávy následující chyba: Exception inside application: disconnect() takes 1 positional argument but 2 were given
