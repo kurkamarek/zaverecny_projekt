@@ -53,7 +53,7 @@
 
     chatSocket.onmessage = function(e) {
         console.log('onmessage')
-        //kontrola a zobrazení zprávy
+        //kontrola, zobrazení zprávy
         const data = JSON.parse(e.data);
         if (data.message) {
             let html = '<div class="p-4 bg-gray-200 rounded-xl">';
