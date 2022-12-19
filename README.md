@@ -13,7 +13,7 @@
 - zobrazení seznamu s jednotlivými místnostmi &check;
 - zobrazení detailu jednotlivých místností &check;
 - možnost připojit se do chatu &check;
-- funkční odesílání zpráv
+- funkční odesílání zpráv &check;
 - ukládání zpráv
 - dockerizovat aplikaci
 
