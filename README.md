@@ -1,5 +1,5 @@
 # Ročníkový projekt | ChatApp
-#### Webová chatovací aplikace využívající framework Django
+#### Webová chatovací aplikace využívající framework Django a package Channels
 
 ## Cíle:
 - Instalace modulů a virtuálního prostředí &check;
@@ -14,14 +14,17 @@
 - zobrazení detailu jednotlivých místností &check;
 - možnost připojit se do chatu &check;
 - funkční odesílání zpráv &check;
-- ukládání zpráv
-- dockerizovat aplikaci
+- ukládání zpráv &check;
+- dockerizovat aplikaci &check;
+- možnost reagovat na zprávy &check;
+- ukládání reakcí &check;
 
 ## Zdroje:
 - https://youtu.be/SF1k_Twr9cg
 - https://docs.djangoproject.com/en/4.1/intro/tutorial01/
 - https://blog.logrocket.com/dockerizing-django-app/
 - https://pipenv-fork.readthedocs.io/en/latest/basics.html
+- https://www.w3schools.com/
 
 ## Chyby:
 - během připojení do chatu následující chyba: Uncaught TypeError: Cannot read properties of null (reading 'textContent')<br/>

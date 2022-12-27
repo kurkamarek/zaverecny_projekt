@@ -8,6 +8,32 @@
     <title>{% block title %}{% endblock %}ChatApp</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      * {
+        scrollbar-width: auto;
+        scrollbar-color: #bdbfc1 #ffffff;
+      }
+
+      *::-webkit-scrollbar {
+        width: 16px;
+      }
+
+      *::-webkit-scrollbar-track {
+        background: #ffffff;
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background-color: #bdbfc1;
+        border-radius: 10px;
+        border: 3px solid #ffffff;
+      }
+
+      .chat-messages {
+          height: 480px;
+          overflow-y: auto;
+
+      }
+    </style>
 </head>
 
 <body class="bg-teal-600">

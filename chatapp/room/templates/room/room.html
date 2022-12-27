@@ -13,6 +13,9 @@
         <div class="p-4 bg-gray-200 rounded-xl">
             <p class="font-semibold">{{ message.user.username }}</p>
             <p>{{ message.content }}</p>
+            <div id="{{message.id}}">{{ message.reactions }}</div>
+            <button class="hover:text-yellow-600" onclick="makereaction({{ message.id }}, 'like')">Like</button>
+            <button class="hover:text-red-600" onclick="makereaction({{ message.id }}, 'heart')">Heart</button>
         </div>
         {% endfor %}
     </div>
@@ -34,7 +37,6 @@
 <script>
     const roomName = JSON.parse(document.getElementById('json-roomname').textContent);
     const userName = JSON.parse(document.getElementById('json-username').textContent);
-    
     const chatSocket = new WebSocket(
         'ws://'
         + window.location.host
@@ -45,17 +47,44 @@
 
     chatSocket.onmessage = function(e) {
         console.log('onmessage')
-        //kontrola, zobrazení zprávy
+        //kontrola, zobrazení zprávy a reakcí
         const data = JSON.parse(e.data);
-        if (data.message) {
-            let html = '<div class="p-4 bg-gray-200 rounded-xl">';
-                html += '<p class="font-semibold">' + data.username + '</p>';
-                html += '<p>' + data.message + '</p></div>';
-
-            document.querySelector('#chat-messages').innerHTML += html;
-        } else {
-            alert('The message was empty!');
+        console.log(e)
+        if (data.isreaction){
+            console.log(data.reactions)
+            const doc = document.getElementById(data.messageid)
+            console.log(doc)
+            doc.innerHTML = data.reactions
         }
+        else{
+            if (data.message) {
+                let html = '<div class="p-4 bg-gray-200 rounded-xl">';
+                    html += '<p class="font-semibold">' + data.username + '</p>';
+                    html += '<p>' + data.message + '</p>';
+                    html += '<div id="' + data.id + '"> </div>'
+                    html += '<button onclick="makereaction(' + data.id + ', \'like\')">Like </button> '
+                    html += '<button onclick="makereaction(' + data.id + ', \'heart\')">Heart </button>'
+                    html += '</div>'
+
+                document.querySelector('#chat-messages').innerHTML += html;
+
+                scrollToBottom();
+            }
+            else {
+                alert('The message was empty!');
+            }
+        }
+    }
+
+    makereaction = function (id, reaction, e) {
+        console.log(id)
+        chatSocket.send(JSON.stringify({
+            'message': reaction,
+            'username': userName,
+            'room': roomName,
+            'isreaction': true,
+            'id': id
+       }));
     }
 
     chatSocket.onclose = function(e) {
@@ -71,14 +100,23 @@
        const message = messageInputDom.value;
        
        chatSocket.send(JSON.stringify({
-         'message': message,
-         'username': userName,
-         'room': roomName
+           'message': message,
+           'username': userName,
+           'room': roomName,
+           'isreaction': false
        }));
        // resetování pole na prázdnou hodnotu
        messageInputDom.value = '';
 
        return false;
     }
+
+    // funkce pro automatické zobrazení chatovacího pole od ze spodu
+    function scrollToBottom() {
+        const objDiv = document.querySelector('#chat-messages');
+        objDiv.scrollTop = objDiv.scrollHeight;
+    }
+
+    scrollToBottom();
 </script>
 {% endblock %}
